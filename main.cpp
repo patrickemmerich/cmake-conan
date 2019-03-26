@@ -23,7 +23,7 @@ int main() {
     HTTPResponse response;
 
     session.sendRequest(request);
-	std::istream& rs = session.receiveResponse(response);
-	std::cout << response.getStatus() << " " << response.getReason() << std::endl;
-	StreamCopier::copyStream(rs, std::cout);
+    std::istream& rs = session.receiveResponse(response);
+    std::cout << response.getStatus() << " " << response.getReason() << std::endl;
+    StreamCopier::copyStream(rs, std::cout);
 }
